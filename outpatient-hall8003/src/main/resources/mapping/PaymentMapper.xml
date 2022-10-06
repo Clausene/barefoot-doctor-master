@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clausene.outpatien.dao.PaymentMapper">
+    <resultMap id="paymentResultMap" type="com.clausene.outpatien.entities.Payment">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="serialNumber" property="serialNumber" jdbcType="VARCHAR"/>
+    </resultMap>
+    <insert id="create" parameterType="com.clausene.outpatien.entities.Payment">
+        insert into payment(id,serialNumber) value(#{id},#{serialNumber})
+    </insert>
+    <select id="getPaymentById" parameterType="Long" resultMap="paymentResultMap" resultType="com.clausene.outpatien.entities.Payment">
+        select * from payment where id=#{id}
+    </select>
+</mapper>
