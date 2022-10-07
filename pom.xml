@@ -25,6 +25,8 @@
       <module>outpatient-hall9001-dashboard</module>
       <module>outpatient-getway9527</module>
       <module>outpatien-config-center</module>
+      <module>Outpatient-config-client3355</module>
+      <module>outpatient-config-client3366</module>
   </modules>
 
   <!--统一管理jar版本-->

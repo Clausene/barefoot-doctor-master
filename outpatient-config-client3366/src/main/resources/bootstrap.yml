@@ -1,0 +1,27 @@
+server:
+  port: 3366
+spring:
+  application:
+    name: outpatient-config-client
+  cloud:
+    config:
+      label: master
+      name: outpatient-config
+      profile: dev
+      uri: http://localhost:3344
+  rabbitmq:
+    host: 192.168.1.2
+    port: 5672
+    username: clausene
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://soft1.aldeee.com:7001/eureka/
+management:
+  endpoint:
+    web:
+      exposure:
+        includer: "*"
+
+
